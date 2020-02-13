@@ -8,6 +8,7 @@ import networkx
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
 def add_node_to_graph(g, case):
     '''
     Graph.add_node(node_for_adding, **attr)
@@ -55,19 +56,27 @@ def loadGraph(g:networkx.classes.graph.Graph, data_dict):
     for d in data_dict['data']:
         case = d['caseNo']
         relatedCaseNo = d['relatedCaseNo']
+        from_ = d['from']
         stayed = d['stayed']
         visited = d['visited']
         links = d['relatedArrayNo']
 
         g = add_node_to_graph(g, case)
         g = add_node_to_graph(g, relatedCaseNo)
+        
+        if 'china' in from_.lower() or 'wuhan' in from_.lower():
+            from_ = 'imported case'
+        if 'singapore' not in from_.lower(): ## not adding nodes with 'singapore' in the text 
+            g = add_node_to_graph(g, from_)
         g = add_node_to_graph(g, stayed)
-        if 'hospital' not in visited.lower():
+        if 'hospital' not in visited.lower(): ## not adding nodes with 'hospital' in the text 
             g = add_node_to_graph(g, visited)
 
         g = add_edge_to_graph(g, case, relatedCaseNo)
+        if 'singapore' not in from_.lower(): ## not adding nodes with 'singapore' in the text 
+            g = add_edge_to_graph(g, case, from_)
         g = add_edge_to_graph(g, case, stayed)
-        if 'hospital' not in visited.lower():
+        if 'hospital' not in visited.lower():  ## not adding edges with 'hospital' in the text
             g = add_edge_to_graph(g, case, visited)
     return g
 
