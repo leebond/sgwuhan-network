@@ -9,7 +9,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-def add_node_to_graph(g, case):
+def add_node_to_graph(g, case, more_nodes_to_ignore):
     '''
     Graph.add_node(node_for_adding, **attr)
 
@@ -19,18 +19,21 @@ def add_node_to_graph(g, case):
 
     Add multiple nodes.
     '''
-    case = [c.strip() for c in case.split(',')]
+    nodes_to_ignore = ['', 'no info by moh']
     
-    if case != [] and '' not in case and 'No info by MOH' not in case:
-        if len(case) == 1:
-            g.add_node(case[0])
-        else:
-            for node in case:
-                g.add_node(node)
+    case = [c.strip() for c in case.split(',')]
+    case = [c for c in case if c.lower() not in nodes_to_ignore]
+    case = [c for c in case if not any(w in c.lower() for w in more_nodes_to_ignore)]
+    
+    if len(case) != 0:
+        g.add_node(case[0])
+#             else:
+#                 for node in case:
+#                     g.add_node(node)
 
     return g
 
-def add_edge_to_graph(g, case, relatedCaseNo):
+def add_edge_to_graph(g, case, relatedCaseNo, more_nodes_to_ignore):
     '''
     Graph.add_edge(u_of_edge, v_of_edge, **attr)
 
@@ -40,19 +43,24 @@ def add_edge_to_graph(g, case, relatedCaseNo):
 
     Add all the edges in ebunch_to_add.
     '''
-    case = [c.strip() for c in case.split(',')]
-    relatedCaseNo = [rc.strip() for rc in relatedCaseNo.split(',')]
+    nodes_to_ignore = ['', 'no info by moh'] + more_nodes_to_ignore
 
-    if case != [] and '' not in case and 'No info by MOH' not in case and \
-    relatedCaseNo != [] and '' not in relatedCaseNo and 'No info by MOH' not in relatedCaseNo:
-        if len(relatedCaseNo) == 1:
-            g.add_edge(case[0], relatedCaseNo[0])
-        else:
-            for rc in relatedCaseNo:
-                g.add_edge(case[0], rc)
+    case = [c.strip() for c in case.split(',')]
+    case = [c for c in case if c.lower() not in nodes_to_ignore]
+    case = [c for c in case if not any(w in c.lower() for w in more_nodes_to_ignore)]
+
+    relatedCaseNo = [rc.strip() for rc in relatedCaseNo.split(',')]
+    relatedCaseNo = [rc for rc in relatedCaseNo if rc.lower() not in nodes_to_ignore]
+    relatedCaseNo = [rc for rc in relatedCaseNo if not any(w in rc.lower() for w in more_nodes_to_ignore)]
+
+    if len(case) != 0 and len(relatedCaseNo) != 0:
+        g.add_edge(case[0], relatedCaseNo[0])
+#         else:
+#             for rc in relatedCaseNo:
+#                 g.add_edge(case[0], rc)
     return g
 
-def loadGraph(g:networkx.classes.graph.Graph, data_dict):
+def loadGraph(g:networkx.classes.graph.Graph, data_dict, more_nodes_to_ignore):
     for d in data_dict['data']:
         case = d['caseNo']
         relatedCaseNo = d['relatedCaseNo']
@@ -61,23 +69,23 @@ def loadGraph(g:networkx.classes.graph.Graph, data_dict):
         visited = d['visited']
         links = d['relatedArrayNo']
 
-        g = add_node_to_graph(g, case)
-        g = add_node_to_graph(g, relatedCaseNo)
+        g = add_node_to_graph(g, case, more_nodes_to_ignore)
+        g = add_node_to_graph(g, relatedCaseNo, more_nodes_to_ignore)
         
-        if 'china' in from_.lower() or 'wuhan' in from_.lower():
+        if 'china' in from_.lower() or 'wuhan' in from_.lower(): ## rename nodes that come from 'china' or 'wuhan' as 'imported case'
             from_ = 'imported case'
-        if 'singapore' not in from_.lower(): ## not adding nodes with 'singapore' in the text 
-            g = add_node_to_graph(g, from_)
-        g = add_node_to_graph(g, stayed)
-        if 'hospital' not in visited.lower(): ## not adding nodes with 'hospital' in the text 
-            g = add_node_to_graph(g, visited)
+#         if 'singapore' not in from_.lower(): ## not adding nodes with 'singapore' in the text 
+        g = add_node_to_graph(g, from_, more_nodes_to_ignore)
+        g = add_node_to_graph(g, stayed, more_nodes_to_ignore)
+#         if 'hospital' not in visited.lower() and 'gp clinic' not in visited.lower(): ## not adding nodes with 'hospital' and 'gp clinic' in the text 
+        g = add_node_to_graph(g, visited, more_nodes_to_ignore)
 
-        g = add_edge_to_graph(g, case, relatedCaseNo)
-        if 'singapore' not in from_.lower(): ## not adding nodes with 'singapore' in the text 
-            g = add_edge_to_graph(g, case, from_)
-        g = add_edge_to_graph(g, case, stayed)
-        if 'hospital' not in visited.lower():  ## not adding edges with 'hospital' in the text
-            g = add_edge_to_graph(g, case, visited)
+        g = add_edge_to_graph(g, case, relatedCaseNo, more_nodes_to_ignore)
+#         if 'singapore' not in from_.lower(): ## not adding nodes with 'singapore' in the text 
+        g = add_edge_to_graph(g, case, from_, more_nodes_to_ignore)
+        g = add_edge_to_graph(g, case, stayed, more_nodes_to_ignore)
+#         if 'hospital' not in visited.lower() and 'gp clinic' not in visited.lower():  ## not adding edges with 'hospital' and 'gp clinic' in the text
+        g = add_edge_to_graph(g, case, visited, more_nodes_to_ignore)
     return g
 
 def getNodeCentrality(g, func):
