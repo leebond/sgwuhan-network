@@ -1,0 +1,97 @@
+Case Number,Date of Symptoms,Date of Admission/Isolation,Date of Confirmation,Date of MOH reporting,Local case,Days between symptoms and isolation,Linked Case Number,Linked Cluster,Date of Discharge
+1,20-Jan-20,22-Jan-20,23-Jan-20,23-Jan-20,FALSE,2,,,
+2,21-Jan-20,22-Jan-20,24-Jan-20,24-Jan-20,FALSE,1,,,
+3,20-Jan-20,23-Jan-20,24-Jan-20,24-Jan-20,FALSE,3,,,21-Feb-20
+4,23-Jan-20,24-Jan-20,26-Jan-20,26-Jan-20,FALSE,1,,,
+5,24-Jan-20,26-Jan-20,27-Jan-20,27-Jan-20,FALSE,2,,,
+6,25-Jan-20,26-Jan-20,28-Jan-20,28-Jan-20,FALSE,1,,,20-Feb-20
+7,24-Jan-20,24-Jan-20,28-Jan-20,28-Jan-20,FALSE,0,,,
+8,24-Jan-20,27-Jan-20,29-Jan-20,29-Jan-20,FALSE,3,,The Life Church and Missions Singapore,
+9,24-Jan-20,27-Jan-20,29-Jan-20,29-Jan-20,FALSE,3,,The Life Church and Missions Singapore,23-Feb-20
+10,21-Jan-20,28-Jan-20,29-Jan-20,29-Jan-20,FALSE,7,,,
+11,27-Jan-20,26-Jan-20,30-Jan-20,30-Jan-20,FALSE,0,4,,
+12,26-Jan-20,29-Jan-20,30-Jan-20,30-Jan-20,FALSE,3,,,
+13,28-Jan-20,28-Jan-20,30-Jan-20,30-Jan-20,FALSE,0,2,,
+14,28-Jan-20,30-Jan-20,31-Jan-20,31-Jan-20,FALSE,2,,,17-Feb-20
+15,30-Jan-20,30-Jan-20,31-Jan-20,31-Jan-20,FALSE,0,,,17-Feb-20
+16,23-Jan-20,29-Jan-20,31-Jan-20,31-Jan-20,FALSE,6,,,20-Feb-20
+17,30-Jan-20,30-Jan-20,1-Feb-20,1-Feb-20,FALSE,0,,,
+18,30-Jan-20,31-Jan-20,1-Feb-20,1-Feb-20,FALSE,1,,,
+19,29-Jan-20,3-Feb-20,3-Feb-20,4-Feb-20,TRUE,5,,Yong Thai Tang,22-Feb-20
+20,25-Jan-20,3-Feb-20,4-Feb-20,4-Feb-20,TRUE,9,19,Yong Thai Tang,
+21,2-Feb-20,3-Feb-20,4-Feb-20,4-Feb-20,TRUE,1,19,Yong Thai Tang,
+22,3-Feb-20,3-Feb-20,4-Feb-20,4-Feb-20,FALSE,0,,,
+23,3-Feb-20,3-Feb-20,4-Feb-20,4-Feb-20,FALSE,0,,,21-Feb-20
+24,30-Jan-20,3-Feb-20,4-Feb-20,4-Feb-20,TRUE,4,,Yong Thai Tang,
+25,24-Jan-20,3-Feb-20,4-Feb-20,5-Feb-20,TRUE,10,24,Yong Thai Tang,
+26,21-Jan-20,21-Jan-20,4-Feb-20,5-Feb-20,FALSE,0,13,,
+27,1-Feb-20,4-Feb-20,5-Feb-20,5-Feb-20,TRUE,3,19,Yong Thai Tang,21-Feb-20
+28,29-Jan-20,4-Feb-20,5-Feb-20,5-Feb-20,TRUE,6,19,Yong Thai Tang,22-Feb-20
+29,28-Jan-20,3-Feb-20,5-Feb-20,6-Feb-20,TRUE,6,,,
+30,21-Jan-20,6-Feb-20,5-Feb-20,6-Feb-20,TRUE,16,,Grand Hyatt Singapore,
+31,23-Jan-20,1-Feb-20,6-Feb-20,7-Feb-20,TRUE,9,,The Life Church and Missions Singapore,17-Feb-20
+32,2-Feb-20,5-Feb-20,6-Feb-20,7-Feb-20,TRUE,3,,,
+33,30-Jan-20,2-Feb-20,6-Feb-20,7-Feb-20,TRUE,3,,,
+34,27-Jan-20,6-Feb-20,7-Feb-20,8-Feb-20,TRUE,10,,Yong Thai Tang,
+35,30-Jan-20,6-Feb-20,7-Feb-20,8-Feb-20,TRUE,7,,,
+36,24-Jan-20,4-Feb-20,7-Feb-20,8-Feb-20,TRUE,11,,Grand Hyatt Singapore,
+37,30-Jan-20,6-Feb-20,7-Feb-20,8-Feb-20,TRUE,7,,,
+38,3-Feb-20,7-Feb-20,8-Feb-20,8-Feb-20,TRUE,4,,The Life Church and Missions Singapore,
+39,29-Jan-20,6-Feb-20,8-Feb-20,8-Feb-20,TRUE,8,,Grand Hyatt Singapore,
+40,30-Jan-20,7-Feb-20,8-Feb-20,8-Feb-20,TRUE,8,,Yong Thai Tang,
+41,1-Feb-20,7-Feb-20,8-Feb-20,9-Feb-20,TRUE,6,,Paya Lebar Methodist Church,
+42,1-Feb-20,7-Feb-20,8-Feb-20,9-Feb-20,TRUE,6,,Seletar Aerospace Heights,
+43,30-Jan-20,7-Feb-20,8-Feb-20,9-Feb-20,TRUE,8,,Resorts World Sentosa,
+44,31-Jan-20,6-Feb-20,9-Feb-20,10-Feb-20,TRUE,6,13,Cisco,
+45,30-Jan-20,30-Jan-20,10-Feb-20,10-Feb-20,FALSE,0,,,
+46,5-Feb-20,9-Feb-20,10-Feb-20,11-Feb-20,TRUE,4,,,24-Feb-20
+47,6-Feb-20,10-Feb-20,10-Feb-20,11-Feb-20,TRUE,4,42,Seletar Aerospace Heights,
+48,1-Feb-20,10-Feb-20,11-Feb-20,12-Feb-20,TRUE,9,,Grace Assembly of God,17-Feb-20
+49,3-Feb-20,10-Feb-20,11-Feb-20,12-Feb-20,TRUE,7,,Grace Assembly of God,26-Feb-20
+50,7-Feb-20,11-Feb-20,11-Feb-20,12-Feb-20,TRUE,4,,DBS,21-Feb-20
+51,4-Feb-20,11-Feb-20,12-Feb-20,13-Feb-20,TRUE,7,,Grace Assembly of God,21-Feb-20
+52,7-Feb-20,11-Feb-20,12-Feb-20,13-Feb-20,TRUE,4,42,Seletar Aerospace Heights,
+53,10-Feb-20,12-Feb-20,12-Feb-20,13-Feb-20,TRUE,2,,Grace Assembly of God,
+54,10-Feb-20,12-Feb-20,13-Feb-20,13-Feb-20,TRUE,2,,Grace Assembly of God,
+55,30-Jan-20,12-Feb-20,13-Feb-20,13-Feb-20,TRUE,13,50,DBS,
+56,12-Feb-20,12-Feb-20,13-Feb-20,13-Feb-20,TRUE,0,,Seletar Aerospace Heights,26-Feb-20
+57,11-Feb-20,11-Feb-20,13-Feb-20,13-Feb-20,TRUE,0,,Grace Assembly of God,21-Feb-20
+58,10-Feb-20,12-Feb-20,13-Feb-20,13-Feb-20,TRUE,2,,Grace Assembly of God,
+59,7-Feb-20,13-Feb-20,13-Feb-20,14-Feb-20,TRUE,6,,Wilkinson Road,26-Feb-20
+60,8-Feb-20,12-Feb-20,13-Feb-20,14-Feb-20,TRUE,4,,Grace Assembly of God,
+61,6-Feb-20,13-Feb-20,13-Feb-20,14-Feb-20,TRUE,7,,Grace Assembly of God,
+62,9-Feb-20,12-Feb-20,13-Feb-20,14-Feb-20,TRUE,3,,Grace Assembly of God,
+63,10-Feb-20,13-Feb-20,14-Feb-20,14-Feb-20,TRUE,3,,Grace Assembly of God,21-Feb-20
+64,3-Feb-20,13-Feb-20,14-Feb-20,14-Feb-20,TRUE,10,,,23-Feb-20
+65,12-Feb-20,12-Feb-20,14-Feb-20,14-Feb-20,TRUE,0,50,DBS,17-Feb-20
+66,29-Jan-20,12-Feb-20,14-Feb-20,14-Feb-20,TRUE,14,,Grace Assembly of God,20-Feb-20
+67,9-Feb-20,13-Feb-20,14-Feb-20,14-Feb-20,TRUE,4,61,Grace Assembly of God,
+68,30-Jan-20,14-Feb-20,15-Feb-20,15-Feb-20,TRUE,15,66,Grace Assembly of God,
+69,11-Feb-20,11-Feb-20,15-Feb-20,15-Feb-20,TRUE,0,,Seletar Aerospace Heights,
+70,3-Feb-20,14-Feb-20,15-Feb-20,15-Feb-20,TRUE,11,66,Grace Assembly of God,21-Feb-20
+71,1-Feb-20,14-Feb-20,15-Feb-20,15-Feb-20,TRUE,13,66,Grace Assembly of God,
+72,10-Feb-20,14-Feb-20,15-Feb-20,15-Feb-20,TRUE,4,59,Wilkinson Road,
+73,9-Feb-20,13-Feb-20,15-Feb-20,16-Feb-20,TRUE,4,,Grace Assembly of God,26-Feb-20
+74,12-Feb-20,15-Feb-20,15-Feb-20,16-Feb-20,TRUE,3,,Grace Assembly of God,
+75,16-Feb-20,16-Feb-20,16-Feb-20,16-Feb-20,TRUE,0,41,Paya Lebar Methodist Church,
+76,16-Feb-20,16-Feb-20,16-Feb-20,17-Feb-20,FALSE,0,,,
+77,10-Feb-20,12-Feb-20,17-Feb-20,17-Feb-20,TRUE,2,50,DBS,
+78,9-Feb-20,17-Feb-20,17-Feb-20,18-Feb-20,TRUE,8,,Grace Assembly of God,
+79,12-Feb-20,15-Feb-20,17-Feb-20,18-Feb-20,TRUE,3,72,,
+80,4-Feb-20,17-Feb-20,18-Feb-20,18-Feb-20,TRUE,13,66,Grace Assembly of God,
+81,16-Feb-20,17-Feb-20,18-Feb-20,18-Feb-20,TRUE,1,,Grace Assembly of God,
+82,9-Feb-20,18-Feb-20,18-Feb-20,19-Feb-20,TRUE,9,,,
+83,28-Jan-20,18-Feb-20,19-Feb-20,19-Feb-20,TRUE,21,,,21-Feb-20
+84,4-Feb-20,18-Feb-20,19-Feb-20,19-Feb-20,TRUE,14,66,Grace Assembly of God,21-Feb-20
+85,14-Feb-20,19-Feb-20,19-Feb-20,20-Feb-20,TRUE,5,,,
+86,14-Feb-20,19-Feb-20,20-Feb-20,20-Feb-20,TRUE,5,82,,
+87,21-Feb-20,21-Feb-20,21-Feb-20,21-Feb-20,FALSE,0,,,24-Feb-20
+88,16-Feb-20,21-Feb-20,21-Feb-20,21-Feb-20,TRUE,5,66,Grace Assembly of God,
+89,3-Feb-20,21-Feb-20,22-Feb-20,22-Feb-20,TRUE,18,,,
+90,9-Feb-20,23-Feb-20,22-Feb-20,24-Feb-20,TRUE,14,,The Life Church and Missions Singapore,
+91,26-Jan-20,24-Feb-20,22-Feb-20,25-Feb-20,TRUE,29,66,Grace Assembly of God,
+92,17-Feb-20,24-Feb-20,26-Feb-20,26-Feb-20,TRUE,7,,,
+93,17-Feb-20,25-Feb-20,26-Feb-20,26-Feb-20,TRUE,8,,,
+94,11-Feb-20,24-Feb-20,26-Feb-20,27-Feb-20,TRUE,13,,,
+95,,,27-Feb-20,27-Feb-20,TRUE,0,93,,
+96,,,27-Feb-20,27-Feb-20,TRUE,0,94,,
